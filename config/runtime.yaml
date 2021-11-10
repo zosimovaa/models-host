@@ -1,0 +1,35 @@
+appName: ModelHost
+env: dev
+
+models:
+    - gen7:
+        - 300:
+            - v7.4_basic:
+                modelPath: models/v7.4_basic-300
+                disabled: False
+                info: /gen7/300/v7.4_basic
+
+            - v7.4_spread:
+                modelPath: models/v7.4_spread-300
+                disabled: False
+                info: /gen7/300/v7.4_basic
+    - gen8:
+        - 600:
+            - v8.2_basic:
+                modelPath: models/v8.2_basic-600
+                disabled: False
+                info: /gen7/300/v7.4_basic
+
+
+traders:
+    - PopularTickers300:
+          tickers:
+              - BTC_ETH
+              - USDT_BTC
+              - BTC_XMR
+          model: /gen7/300/v7.4_basic
+          period: 300
+          update: 60
+
+
+

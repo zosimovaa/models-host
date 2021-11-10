@@ -1,0 +1,6 @@
+- basicv1:
+                        modelPath: models/basicv1
+                        timerate: 300
+                        update: 60
+                        info: /gen7/300/basicv1
+                        disabled: False
