@@ -1,11 +1,3 @@
-import yaml
-
-with open("config/runtime.yaml", "r") as stream:
-    try:
-        print(yaml.safe_load(stream))
-    except yaml.YAMLError as exc:
-        print(exc)
-
 
 class ModelsHostError(Exception):
     ERROR_MESSAGE = "Some error was raised"
@@ -24,8 +16,17 @@ class ModelNotInitialized(ModelsHostError):
     ERROR_MESSAGE = "Model not initialized"
 
 
+class ModelDisabled(ModelsHostError):
+    ERROR_MESSAGE = "Model disabled"
+
+
 class PredictionError(ModelsHostError):
     ERROR_MESSAGE = "Prediction error was raised"
+
+
+class BadPredictionRequestError(ModelsHostError):
+    ERROR_MESSAGE = "Payload wasn't recognized"
+
 
 try:
     raise ModelNotInitialized("dddd")

@@ -1,0 +1,1 @@
+from resources.model_resource import ModelEndpoint

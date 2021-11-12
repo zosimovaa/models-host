@@ -1,35 +1,57 @@
-appName: ModelHost
+app_name: ModelsHost
 env: dev
+port: 57820
+
+telegram:
+  token: 344617953:AAECfdvjZEZjSQk4GAfBAT0BlMElXUs2Tn4
+  chat_id: 211945135
+
+log:
+  level: 20  #ERROR = 40 | WARNING = 30 | INFO = 20 | DEBUG = 10
+  path: ./logs/
 
 models:
-    - gen7:
-        - 300:
-            - v7.4_basic:
-                modelPath: models/v7.4_basic-300
-                disabled: False
-                info: /gen7/300/v7.4_basic
+  v7.4_basic:
+    gen: gen7
+    timerate: 5min
+    disabled: False
+    model_path: models/model_app-test-8.2.1-FutureFeature
+    info: /gen7/5m/v7.4_basic
 
-            - v7.4_spread:
-                modelPath: models/v7.4_spread-300
-                disabled: False
-                info: /gen7/300/v7.4_basic
-    - gen8:
-        - 600:
-            - v8.2_basic:
-                modelPath: models/v8.2_basic-600
-                disabled: False
-                info: /gen7/300/v7.4_basic
+  v7.4_spread:
+    gen: gen7
+    timerate: 5min
+    disabled: False
+    model_path: models/model_app-test-8.2.1-FutureFeature
+    info: /gen7/5m/v7.4_basic
+
+  v8.2.1-FutureFeature:
+    gen: gen8
+    timerate: 15min
+    disabled: False
+    model_path: models/model_app-test-8.2.1-FutureFeature
+    path: /gen8/15min/v8.2_basic
+    info: Модель с макскимальным результатом на тестовых данных
 
 
 traders:
-    - PopularTickers300:
+    - HiVolTickers5min:
           tickers:
               - BTC_ETH
               - USDT_BTC
               - BTC_XMR
-          model: /gen7/300/v7.4_basic
+          model: /gen7/5min/v7.4_basic
           period: 300
-          update: 60
+          update: 90
+
+    - HiVolTickers10min:
+          tickers:
+              - BTC_ETH
+              - USDT_BTC
+              - BTC_XMR
+          model: /gen7/5min/v7.4_basic
+          period: 600
+          update: 90
 
 
 

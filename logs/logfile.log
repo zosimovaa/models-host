@@ -1,0 +1,45 @@
+2021-11-12 22:26:17,518 | tensorflow | WARNING: No training configuration found in save file, so the model was *not* compiled. Compile it manually.
+2021-11-12 22:26:17,525 | resources.model_resource | INFO: ModelEndpoint v7.4_basic initialized
+2021-11-12 22:26:17,525 | root | WARNING: Model v7.4_basic initialized at endpoint /gen7/5min/v7.4_basic
+2021-11-12 22:26:17,781 | tensorflow | WARNING: No training configuration found in save file, so the model was *not* compiled. Compile it manually.
+2021-11-12 22:26:17,786 | resources.model_resource | INFO: ModelEndpoint v7.4_spread initialized
+2021-11-12 22:26:17,786 | root | WARNING: Model v7.4_spread initialized at endpoint /gen7/5min/v7.4_spread
+2021-11-12 22:26:18,056 | tensorflow | WARNING: No training configuration found in save file, so the model was *not* compiled. Compile it manually.
+2021-11-12 22:26:18,061 | resources.model_resource | INFO: ModelEndpoint v8.2.1-FutureFeature initialized
+2021-11-12 22:26:18,061 | root | WARNING: Model v8.2.1-FutureFeature initialized at endpoint /gen8/15min/v8.2.1-FutureFeature
+2021-11-12 22:26:18,063 | werkzeug | INFO:  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2021-11-12 22:34:50,002 | tools.log_manager | WARNING: Model v7.4_basic initialized at endpoint /gen7/5min/v7.4_basic
+2021-11-12 22:34:50,268 | tools.log_manager | WARNING: Model v7.4_spread initialized at endpoint /gen7/5min/v7.4_spread
+2021-11-12 22:34:50,545 | tools.log_manager | WARNING: Model v8.2.1-FutureFeature initialized at endpoint /gen8/15min/v8.2.1-FutureFeature
+2021-11-12 22:40:57,653 | tools.log_manager | CRITICAL: Application started
+2021-11-12 22:40:58,299 | tools.log_manager | WARNING: Model v7.4_basic initialized at endpoint /gen7/5min/v7.4_basic
+2021-11-12 22:40:58,566 | tools.log_manager | WARNING: Model v7.4_spread initialized at endpoint /gen7/5min/v7.4_spread
+2021-11-12 22:40:58,835 | tools.log_manager | WARNING: Model v8.2.1-FutureFeature initialized at endpoint /gen8/15min/v8.2.1-FutureFeature
+2021-11-12 22:42:10,579 | tools.log_manager | CRITICAL: Application started
+2021-11-12 22:42:11,135 | tools.log_manager | WARNING: Model v7.4_basic initialized at endpoint /gen7/5min/v7.4_basic
+2021-11-12 22:42:11,407 | tools.log_manager | WARNING: Model v7.4_spread initialized at endpoint /gen7/5min/v7.4_spread
+2021-11-12 22:42:11,671 | tools.log_manager | WARNING: Model v8.2.1-FutureFeature initialized at endpoint /gen8/15min/v8.2.1-FutureFeature
+2021-11-12 23:17:24,246 | tools.log_manager | CRITICAL: Application started
+2021-11-12 23:17:24,972 | tools.log_manager | WARNING: Model v7.4_basic initialized at endpoint /gen7/5min/v7.4_basic
+2021-11-12 23:17:25,245 | tools.log_manager | WARNING: Model v7.4_spread initialized at endpoint /gen7/5min/v7.4_spread
+2021-11-12 23:17:25,509 | tools.log_manager | WARNING: Model v8.2.1-FutureFeature initialized at endpoint /gen8/15min/v8.2.1-FutureFeature
+2021-11-12 23:18:50,038 | tools.log_manager | CRITICAL: Application started
+2021-11-12 23:18:50,688 | tools.log_manager | WARNING: Model v7.4_basic initialized at endpoint /gen7/5min/v7.4_basic
+2021-11-12 23:18:50,977 | tools.log_manager | WARNING: Model v7.4_spread initialized at endpoint /gen7/5min/v7.4_spread
+2021-11-12 23:18:51,261 | tools.log_manager | WARNING: Model v8.2.1-FutureFeature initialized at endpoint /gen8/15min/v8.2.1-FutureFeature
+2021-11-12 23:19:14,720 | tools.log_manager | CRITICAL: Application started
+2021-11-12 23:19:15,286 | tools.log_manager | WARNING: Model v7.4_basic initialized at endpoint /gen7/5min/v7.4_basic
+2021-11-12 23:19:15,549 | tools.log_manager | WARNING: Model v7.4_spread initialized at endpoint /gen7/5min/v7.4_spread
+2021-11-12 23:19:15,800 | tools.log_manager | WARNING: Model v8.2.1-FutureFeature initialized at endpoint /gen8/15min/v8.2.1-FutureFeature
+2021-11-12 23:21:47,389 | tools.log_manager | CRITICAL: Application started
+2021-11-12 23:21:47,960 | tools.log_manager | WARNING: Model v7.4_basic initialized at endpoint /gen7/5min/v7.4_basic
+2021-11-12 23:21:48,256 | tools.log_manager | WARNING: Model v7.4_spread initialized at endpoint /gen7/5min/v7.4_spread
+2021-11-12 23:21:48,533 | tools.log_manager | WARNING: Model v8.2.1-FutureFeature initialized at endpoint /gen8/15min/v8.2.1-FutureFeature
+2021-11-12 23:24:38,549 | tools.log_manager | CRITICAL: Application started
+2021-11-12 23:24:39,125 | tools.log_manager | WARNING: Model v7.4_basic initialized at endpoint /gen7/5min/v7.4_basic
+2021-11-12 23:24:39,390 | tools.log_manager | WARNING: Model v7.4_spread initialized at endpoint /gen7/5min/v7.4_spread
+2021-11-12 23:24:39,646 | tools.log_manager | WARNING: Model v8.2.1-FutureFeature initialized at endpoint /gen8/15min/v8.2.1-FutureFeature
+2021-11-12 23:25:52,243 | tools.log_manager | CRITICAL: Application started
+2021-11-12 23:25:52,839 | tools.log_manager | CRITICAL: Model v7.4_basic initialized at endpoint /gen7/5min/v7.4_basic
+2021-11-12 23:25:53,218 | tools.log_manager | CRITICAL: Model v7.4_spread initialized at endpoint /gen7/5min/v7.4_spread
+2021-11-12 23:25:53,554 | tools.log_manager | CRITICAL: Model v8.2.1-FutureFeature initialized at endpoint /gen8/15min/v8.2.1-FutureFeature
