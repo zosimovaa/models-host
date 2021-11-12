@@ -1,2 +1,5 @@
 .idea
 .deprecated
+resources/__pycache__
+tools/__pycache__
+logs

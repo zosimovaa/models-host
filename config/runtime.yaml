@@ -32,26 +32,3 @@ models:
     model_path: models/model_app-test-8.2.1-FutureFeature
     path: /gen8/15min/v8.2_basic
     info: Модель с макскимальным результатом на тестовых данных
-
-
-traders:
-    - HiVolTickers5min:
-          tickers:
-              - BTC_ETH
-              - USDT_BTC
-              - BTC_XMR
-          model: /gen7/5min/v7.4_basic
-          period: 300
-          update: 90
-
-    - HiVolTickers10min:
-          tickers:
-              - BTC_ETH
-              - USDT_BTC
-              - BTC_XMR
-          model: /gen7/5min/v7.4_basic
-          period: 600
-          update: 90
-
-
-
