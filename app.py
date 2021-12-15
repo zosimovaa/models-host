@@ -26,7 +26,7 @@ def main(app_config):
                 app.add_url_rule(api_path, alias, ModelEndpoint(alias, model_config))
                 logger.critical("Model {0} initialized at endpoint {1}".format(alias, api_path))
 
-            app.run(debug=False, port=app_config.get("port", 5000))
+            app.run(debug=False, port=app_config.get("port", 5000), host="0.0.0.0")
 
         except Exception as e:
             logger.error(e)
