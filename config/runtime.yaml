@@ -13,22 +13,19 @@ log:
 models:
   v7.4_basic:
     gen: gen7
-    timerate: 5min
+    period: 300
     disabled: False
-    model_path: models/model_app-test-8.2.1-FutureFeature
-    info: /gen7/5m/v7.4_basic
+    path: models/model_app-test-8.2.1-FutureFeature
 
   v7.4_spread:
     gen: gen7
-    timerate: 5min
+    period: 300
     disabled: False
-    model_path: models/model_app-test-8.2.1-FutureFeature
-    info: /gen7/5m/v7.4_basic
+    path: models/model_app-test-8.2.1-FutureFeature
 
   v8.2.1-FutureFeature:
     gen: gen8
-    timerate: 15min
+    period: 900
     disabled: False
-    model_path: models/model_app-test-8.2.1-FutureFeature
-    path: /gen8/15min/v8.2_basic
-    info: Модель с макскимальным результатом на тестовых данных
+    path: models/model_app-test-8.2.1-FutureFeature
+    info: Модель с максимальным результатом на тестовых данных

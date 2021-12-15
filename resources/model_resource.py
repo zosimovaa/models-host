@@ -23,7 +23,7 @@ class ModelEndpoint:
 
         if not self.disabled:
             try:
-                self.model_path = model_config.get("model_path")
+                self.model_path = model_config.get("path")
                 self.model = tf.keras.models.load_model(self.model_path)
                 self.model.compile()
                 self.initialized = True
