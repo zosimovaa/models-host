@@ -41,8 +41,6 @@ class ModelEndpoint:
         except (EOFError, Exception) as error:
             error_response = dict({"success": False, "error": error.__str__()})
             self.response.set_data(json.dumps(error_response))
-
-        logger.critical("Service {} was called".format(self.alias))
         return self.response
 
     def get(self, *args):

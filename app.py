@@ -2,14 +2,17 @@ import logging
 
 from tools import create_logger
 from tools import read_config
+
+config = read_config("config/runtime.yaml")
+logger = create_logger(config)
+
+
 from flask import Flask
 from waitress import serve
 from resources import ModelEndpoint
 import traceback
 import time
 
-config = read_config("config/runtime.yaml")
-logger = create_logger(config)
 logging.basicConfig(level=logging.INFO)
 
 
