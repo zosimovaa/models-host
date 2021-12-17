@@ -27,7 +27,7 @@ class ModelEndpoint:
                 self.model = tf.keras.models.load_model(self.model_path)
                 self.model.compile()
                 self.initialized = True
-                logger.info("ModelEndpoint {} initialized".format(alias))
+                logger.warning("ModelEndpoint {} initialized".format(alias))
             except Exception as e:
                 logger.error(e)
                 logger.error(traceback.format_exc())
@@ -50,6 +50,7 @@ class ModelEndpoint:
             "model_config": self.model_config,
             "isInitialized": self.initialized
         }
+        logger.info("{0}: {1} method called".format(self.alias, "get"))
         self.response.set_data(json.dumps(response))
 
     def post(self, *args):
@@ -59,6 +60,9 @@ class ModelEndpoint:
 
         data_bin = request.get_data()
         observation = pickle.loads(data_bin)
-        action = self.model.predict(observation)
+        obs_transformed = [tf.expand_dims(tf.convert_to_tensor(obs), 0) for obs in observation]
+        action = self.model.predict(obs_transformed)
         response_payload = dict({"success": True, "action": action})
+
+        logger.info("{0}: {1} method called".format(self.alias, "post"))
         self.response.set_data(json.dumps(response_payload))

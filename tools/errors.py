@@ -27,8 +27,3 @@ class PredictionError(ModelsHostError):
 class BadPredictionRequestError(ModelsHostError):
     ERROR_MESSAGE = "Payload wasn't recognized"
 
-
-try:
-    raise ModelNotInitialized("dddd")
-except Exception as e:
-    print(e)

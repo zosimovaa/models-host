@@ -1,12 +1,16 @@
+import logging
+
 from tools import create_logger
 from tools import read_config
 from flask import Flask
+from waitress import serve
 from resources import ModelEndpoint
 import traceback
 import time
 
 config = read_config("config/runtime.yaml")
 logger = create_logger(config)
+logging.basicConfig(level=logging.INFO)
 
 
 def main(app_config):
@@ -26,7 +30,7 @@ def main(app_config):
                 app.add_url_rule(api_path, alias, ModelEndpoint(alias, model_config))
                 logger.critical("Model {0} initialized at endpoint {1}".format(alias, api_path))
 
-            app.run(debug=False, port=app_config.get("port", 5000), host="0.0.0.0")
+            serve(app, host="0.0.0.0", port=app_config.get("port", 5000))
 
         except Exception as e:
             logger.error(e)
