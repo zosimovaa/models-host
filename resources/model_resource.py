@@ -62,7 +62,8 @@ class ModelEndpoint:
         observation = pickle.loads(data_bin)
         obs_transformed = [tf.expand_dims(tf.convert_to_tensor(obs), 0) for obs in observation]
         action = self.model.predict(obs_transformed)
-        response_payload = dict({"success": True, "action": action})
+
+        response_payload = pickle.dumps(dict({"success": True, "action": action}))
 
         logger.info("{0}: {1} method called".format(self.alias, "post"))
-        self.response.set_data(json.dumps(response_payload))
+        self.response.set_data(response_payload)
