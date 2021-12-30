@@ -16,6 +16,11 @@ import time
 logging.basicConfig(level=logging.INFO)
 
 
+def path_constructor(gen, period, alias):
+    api_path = "/".join(["", gen, period, alias])
+    return api_path
+
+
 def main(app_config):
     while True:
         try:
@@ -24,12 +29,9 @@ def main(app_config):
 
             for alias in app_config["models"]:
                 model_config = app_config["models"][alias]
-                api_path = "/".join([
-                    "",
-                    str(model_config.get("gen", "gX")),
-                    str(model_config.get("period")),
-                    str(alias)
-                ])
+                api_path = path_constructor(
+                    str(model_config.get("gen", "gX")), str(model_config.get("period")), str(alias)
+                )
                 app.add_url_rule(api_path, alias, ModelEndpoint(alias, model_config))
                 logger.critical("Model {0} initialized at endpoint {1}".format(alias, api_path))
 
