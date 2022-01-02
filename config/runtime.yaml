@@ -11,21 +11,15 @@ log:
   path: ./logs/
 
 models:
-  v7.4_basic:
-    gen: gen7
-    period: 300
-    disabled: False
-    path: models/model_app-test-8.2.1-FutureFeature
-
-  v7.4_spread:
-    gen: gen7
-    period: 300
-    disabled: False
-    path: models/model_app-test-8.2.1-FutureFeature
-
-  v8.2.1-FutureFeature:
+  v8.Basic-1.1:
     gen: gen8
-    period: 900
+    period: 300
     disabled: False
-    path: models/model_app-test-8.2.1-FutureFeature
-    info: Модель с максимальным результатом на тестовых данных
+    path: models/model_gen8-Basic-1.1
+
+  v8.FutureFeature-2.1:
+    gen: gen8
+    period: 300
+    disabled: False
+    path: models/model_gen8-FutureFeature-2.1
+
